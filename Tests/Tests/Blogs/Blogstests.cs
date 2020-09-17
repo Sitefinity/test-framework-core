@@ -103,11 +103,11 @@ namespace Tests
             var results = JsonConvert.DeserializeObject<dynamic>(response.Content);
             Assert.AreEqual(post.Title, results.Title.ToString());
 
-            postId = results.Id;
-            Assert.IsNotNull(blogId);
+            post.ID = results.Id;
 
             response = operations.Publish(post);
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.IsTrue(response.Content.Contains("Content has been published successfully."), "Response message after publish is not correct");
         }
 
         [TestMethod]
@@ -139,7 +139,6 @@ namespace Tests
 
         private const string TestContentPrefix = "sf_test";
         private static Guid blogId;
-        private static Guid postId;
         private static string blogsTitle;
         private static string postTitle;
         private static string PostContent = "The quick brown fox jumps over the lazy dog";

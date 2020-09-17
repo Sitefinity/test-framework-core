@@ -60,7 +60,7 @@ namespace Tests
             document.ID = results.Id;
 
             var uploadedDocument = operations.GetItem(document);
-            Assert.AreEqual(HttpStatusCode.OK, (int)uploadedDocument.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, uploadedDocument.StatusCode);
         }
 
         /// <summary>

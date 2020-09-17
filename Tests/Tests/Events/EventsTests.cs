@@ -128,7 +128,8 @@ namespace Tests
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
 
             var result = operations.Publish(eventItem);
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
+            Assert.IsTrue(result.Content.Contains("Content has been published successfully."), "Response message after publish is not correct");
         }
 
         /// <summary>

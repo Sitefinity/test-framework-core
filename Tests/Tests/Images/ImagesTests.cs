@@ -60,7 +60,7 @@ namespace Tests
             image.ID = results.Id;
 
             var uploadedImage = operations.GetItem(image);
-            Assert.AreEqual(HttpStatusCode.OK, (int)uploadedImage.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, uploadedImage.StatusCode);
         }
 
         /// <summary>

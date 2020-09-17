@@ -26,10 +26,9 @@ namespace TestFrameworkCore
         /// <returns>Returns the response of the request.</returns>
         public IRestResponse Publish(TContent item)
         {
-            item.properties.Add("application/json", "{\n    action: \"Publish\",\n    actionParameters: {\n    }\n}");
+            var body = "{\"action\": \"Publish\",\"actionParameters\": {}}";
             var requestUrl = SiteSettings.BaseUrl + item.EndpointUrl + "(" + item.ID + ")" + "/operation";
-
-            return this.ExecuteSitefinityRequest(Method.POST, requestUrl, item.properties);
+            return this.ExecuteSitefinityRequest(Method.POST, requestUrl, body);
         }
 
         /// <summary>
