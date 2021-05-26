@@ -1,7 +1,7 @@
 Progress® Sitefinity® CMS test framework samples
 ================================================
 
->**Latest supported version**: Sitefinity CMS 12.2.7200.0
+>**Latest supported version**: Sitefinity CMS 13.3.7600.0
 
 ## Overview
 
@@ -26,9 +26,9 @@ To use the sample, you need:
 * You must have a Sitefinity CMS license.
 * Your setup must comply with the system requirements.  
  For more information, see the [System requirements](https://docs.sitefinity.com/system-requirements) for the respective Sitefinity CMS version.
-* .NET Framework 4.8 Developer Pack
-* Visual Studio 2017 or later
-* Sitefinity CMS 12.2 or later
+* .NET 5
+* Visual Studio 2019 or later
+* Sitefinity CMS 13.3 or later
 
 ## Installation
 
