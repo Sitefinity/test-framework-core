@@ -9,7 +9,9 @@ namespace TestFrameworkCore
     {
         public static void Authenticate()
         {
-            var client = new RestClient(SiteSettings.BaseUrl + "/Sitefinity/Authenticate/OpenID/connect/token");
+            //var client = new RestClient(SiteSettings.BaseUrl + "/Sitefinity/Authenticate/OpenID/connect/token");
+            //OAuth Authenication
+            var client = new RestClient(SiteSettings.BaseUrl + "/Sitefinity/oauth/token");
             var request = new RestRequest(Method.POST);
 
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
